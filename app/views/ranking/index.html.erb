@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+  </head>
+  <body>
+<div class="a-head-title">
+ <h1>Formula E in TOKYO MOTOR SHOW </h1>
+</div>
+
+<div class="b-lucas">
+ <h3>ルーカスに挑戦！</h3>
+ <div class="b-lucas-video">
+<p>ルーカスプレイ映像</p>
+ </div>
+</div>
+
+<div class="c-result">
+ <div class="c-result-content">
+ <div class="c-result-title">
+  <h2>Top 10 Drivers </h2>
+ </div>
+ <div class="c-result-table">
+<table class="ctable">
+  <thead>
+        <tr>
+      <th width="10%">Position</th>
+      <th width="65%">Driver</th>
+      <th width="25%">Time</th>
+    </tr>
+  </thead>
+  <tbody>
+       <% @users.each do |user| %>
+  
+    <tr><td class="rank"></td> <td><%= user.name %></td><td><%= user.time %></td></tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div class="d-result">
+<div class="d-result-title">
+<h2> All Results </h2>
+</div>
+
+<table class="d-result-table">
+<tbody>
+<tr>
+<th>10/28</th>
+<th>10/29</th>
+<th>10/30</th>
+<th>11/01</th>
+<th>11/02</th>
+<th>11/03</th>
+<th>11/04</th>
+<th>11/05</th>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+</body>
+</html>
+
+
+
+

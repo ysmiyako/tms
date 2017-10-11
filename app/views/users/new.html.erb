@@ -1,0 +1,59 @@
+<script>
+  $(function(){
+    $('#timebutton').on('click',function(){
+
+      // コンテンツの表示を切り替える
+      $('.timefield').hide()
+      $('.namefield').show()
+      $('.actions').show()
+      $('#timebutton').hide()
+    });
+
+  });
+</script>
+<style>
+    .namefield {
+        display: none;
+    }
+    
+    .actions {
+        display: none;
+    }
+    
+</style>
+<div class="container">
+<div class="atitle">
+<h1>New Driver</h1>
+</div>
+
+<%= bootstrap_form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2> 登録時にエラーが発生しました。</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="afield">
+  <div class="namefield">
+    <%= f.text_field :name %>
+  </div>
+  <div class="timefield">
+    
+    <%= f.text_field :time %>
+  
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  </div>
+<% end %>
+  <div class="bbutton">
+  <button id="timebutton" class="btn btn-default">Next</button>
+  </div>
+
+</div>

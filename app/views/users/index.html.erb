@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+
+<h1>管理画面</h1>
+
+
+<div id="search"> 
+<%= form_tag(users_path, method: "get") do %>
+<%= label_tag :name, "Name  " %></br>
+<%= text_field_tag :name, params[:name] %>
+<%= submit_tag "検索" %>
+<% end %>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th width="35%">Name</th>
+      <th width="35%">Time</th>
+      <th width="30%"; colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.time %></td>
+       
+        <td><%= link_to '編集', edit_user_path(user) %></td>
+        <td><%= link_to '削除', user, method: :delete, data: { confirm: '本当に削除しますか？?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Driver', new_user_path %>
+</div>

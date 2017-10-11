@@ -1,0 +1,176 @@
+// Place all the styles related to the ranking controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.a-head-title {
+width: 100%;
+padding: 10px;
+background-color: white;
+color: green;
+}
+
+.b-lucas {
+text-align: center;
+padding: 20px;
+padding-bottom: 50px;
+}
+
+.b-lucas-video {
+margin: 0 auto;
+padding: 100px;
+width: 200px;
+border: 5px double #333333;
+}
+
+.c-result {
+margin: 0 auto;
+background-color:#f0f8ff ;
+padding: 20px;
+padding-bottom: 50px;
+
+}
+
+.c-result-title {
+color: green;
+}
+
+.c-result-content {
+width: 65%;
+margin: 0 auto;
+}
+
+.ctable {
+ conter-reset:rank;
+  width: 100%;
+  border-spacing: 0;
+  font-size:14px;
+   margin-left: auto;
+  margin-right: auto;
+}
+.ctable th {
+  color: #fff;
+  padding: 8px 15px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #808080), color-stop(1.00, #121212));
+background: -webkit-linear-gradient(#808080, #121212);
+background: -moz-linear-gradient(#808080, #121212);
+background: -o-linear-gradient(#808080, #121212);
+background: -ms-linear-gradient(#808080, #121212);
+background: linear-gradient(#808080, #121212);
+ font-weight: bold;
+  border-top:1px solid #aaa;
+  border-bottom:1px solid #aaa;
+  line-height: 120%;
+  text-align: center;
+  text-shadow:0 -1px 0 rgba(255,255,255,0.9);
+  box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+}
+
+.ctable th:first-child {
+  border-left:1px solid #aaa;
+  border-radius: 5px 0 0 0;	
+}
+.ctable th:last-child {
+  border-radius:0 5px 0 0;
+  border-right:1px solid #aaa;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+.ctable tr td {
+  padding: 8px 15px;
+  text-align: center;
+}
+.ctable tr td:first-child {
+  border-left: 1px solid #aaa;
+}
+.ctable tr td:last-child {
+  border-right: 1px solid #aaa;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+.ctable tr {
+  background: #fff;
+}
+.ctable tr:nth-child(2n+1) {
+  background: #f5f5f5;
+}
+.ctable tr:last-child td {
+  border-bottom:1px solid #aaa;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+.ctable tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+.ctable tr:last-child :last-child {
+  border-radius: 0 0 5px 0;
+}
+.ctable tr:hover {
+  background: #eee;
+  cursor:pointer;
+}
+.rank{
+counter-increment:rank;
+}
+ 
+.rank:before {
+content: counter(rank);
+}
+
+
+.d-result {
+margin: 0 auto;
+padding: 20px;
+width: 65%;
+}
+
+.d-result-title{
+color:green;
+}
+
+.d-result-table {
+width: 100%;
+}
+.d-result-table tr {
+background-color: Black;
+color: white;
+}
+
+.ba-title {
+  margin: 0 auto;
+  width: 80%;
+  padding: 20px;
+color:green;
+}
+
+
+
+.ca-title {
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+color:green;
+}
+
+.ca-video {
+  padding: 50px;
+  background-color:#f0f8ff ;
+  color:green;
+  padding-bottom: 300px;
+}
+
+.ca-video-content {
+  margin: 0 auto;
+  width: 65%;
+  padding: 20px;
+  padding-bottom: 50px;
+}
+.ca-video-player {
+margin: 0 auto;
+padding: 100px;
+width: 200px;
+border: 5px double #333333;
+text-align: center;
+}
+.ca-sns {
+  margin: 0 auto;
+  width: 65%;
+  padding: 20px;
+  float: right;
+}
