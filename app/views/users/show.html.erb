@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
-
+<div class="showtitle">
+<h1>Thank you for playing!</h1>
+</div>
+<div class="showinfo">
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
@@ -9,6 +12,8 @@
   <strong>Time:</strong>
   <%= @user.time %>
 </p>
+</div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', new_user_path %>
+
+<%= link_to '編集', edit_user_path(@user) %> |
+<%= link_to 'New Driver', new_user_path %>

@@ -1,0 +1,14 @@
+<h1>Individual Page</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @user.time %>
+</p>
+
+<div class="video">
+  <%= image_tag @user.movie_url.to_s %>
+</div>

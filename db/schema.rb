@@ -11,15 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171004092936) do
+ActiveRecord::Schema.define(version: 20171013064804) do
 
   create_table "users", force: :cascade do |t|
     t.text     "name"
     t.decimal  "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "mail"
-    t.string   "phone"
+    t.string   "movie"
   end
 
 end

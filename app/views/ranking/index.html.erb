@@ -34,7 +34,7 @@
   <tbody>
        <% @users.each do |user| %>
   
-    <tr><td class="rank"></td> <td><%= user.name %></td><td><%= user.time %></td></tr>
+    <tr><td class="rank"></td> <td><%= link_to_if(user.movie.present?, user.name, movie_path(user)) %></td><td><%= user.time %></td></tr>
     <% end %>
   </tbody>
 </table>
