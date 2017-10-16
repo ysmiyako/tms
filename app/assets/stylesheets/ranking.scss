@@ -2,11 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
+
 .a-head-title {
 width: 100%;
 padding: 10px;
 background-color: white;
 color: green;
+}
+
+.a-head-image{
+  padding: 180px;
+  background-image: url(FE12.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 .b-lucas {
@@ -27,7 +37,6 @@ margin: 0 auto;
 background-color:#f0f8ff ;
 padding: 20px;
 padding-bottom: 50px;
-
 }
 
 .c-result-title {
@@ -40,7 +49,6 @@ margin: 0 auto;
 }
 
 .ctable {
- conter-reset:rank;
   width: 100%;
   border-spacing: 0;
   font-size:14px;
@@ -105,13 +113,7 @@ background: linear-gradient(#808080, #121212);
   background: #eee;
   cursor:pointer;
 }
-.rank{
-counter-increment:rank;
-}
- 
-.rank:before {
-content: counter(rank);
-}
+
 
 
 .d-result {
@@ -134,12 +136,17 @@ color: white;
 
 .ba-title {
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
   padding: 20px;
 color:green;
 }
 
-
+.ba-head-image {
+  padding: 180px;
+  background-image: url(result.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
 
 .ca-title {
   margin: 0 auto;
@@ -147,6 +154,14 @@ color:green;
   padding: 20px;
 color:green;
 }
+
+.ca-image {
+  padding: 180px;
+  background-image: url(back12.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
 
 .ca-video {
   padding: 50px;
@@ -173,4 +188,17 @@ text-align: center;
   width: 65%;
   padding: 20px;
   float: right;
+}
+
+@media screen and (max-width: 750px){
+  
+ 
+
+  .a-head-title>h1 {
+    font-size: 15pt;
+  }
+
+  .a-head-image {
+    padding: 80px;
+  }
 }

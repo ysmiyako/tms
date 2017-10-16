@@ -1,4 +1,26 @@
+<script>
+  $(function(){
+    $('#timebutton').on('click',function(){
 
+      // コンテンツの表示を切り替える
+      $('.timefield').hide()
+      $('.namefield').show()
+      $('.actions').show()
+      $('#timebutton').hide()
+    });
+
+  });
+</script>
+<style>
+    .namefield {
+        display: none;
+    }
+    
+    .actions {
+        display: none;
+    }
+    
+</style>
 <div class="container">
 <div class="atitle">
 <h1>New Driver</h1>
@@ -27,8 +49,8 @@
   </div>
   
    <div class="field">
-    <%= f.label :allow, "プレイ動画を特設ページにて公開できます。ご希望の方はチェックしてください。" %>
-    <%= f.check_box :allow, label:" " %>
+    <%= f.label :プレイ動画を特設ページにて公開できます。ご希望の方はチェックしてください。 %>
+    <%= f.check_box :allow %>
   </div>
  
   <div class="actions">
@@ -36,6 +58,8 @@
   </div>
   </div>
 <% end %>
-
+  <div class="bbutton">
+  <button id="timebutton" class="btn btn-default">Next</button>
+  </div>
 
 </div>
