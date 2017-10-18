@@ -1,11 +1,10 @@
+<body>
+<div class="editcontent">
 <h1>Editing User</h1>
 
 <%= render 'form' %>
-<% if @user.allow %>
-<%= "動画公開可" %>
-<% else %>
-<%= "動画公開不可" %>
-<% end %>
 
-<%= link_to 'Show', @user %> |
+
 <%= link_to 'Back', users_path %>
+</div>
+</body>

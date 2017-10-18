@@ -4,10 +4,14 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.page(params[:page])
     
      if params[:name].present?
        @users = @users.get_by_name params[:name]
+     end
+     
+     if params[:allow].present?
+       @users = @users.where(:allow => true)
      end
   end
 
@@ -33,7 +37,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: '登録完了' }
+        format.html { redirect_to users_new_complete_path, notice: '登録完了' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -64,6 +68,9 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url, notice: '削除完了' }
       format.json { head :no_content }
     end
+  end
+  
+  def complete
   end
 
   private

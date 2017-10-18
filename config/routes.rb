@@ -2,6 +2,18 @@ Rails.application.routes.draw do
   resources :users
   get 'ranking/top' => 'ranking#index'
   match 'ranking/movie(/:id)'  => 'ranking#show' , :via => :get, as: :movie
+  get 'users/new/complete' => 'users#complete'
+  
+  
+  get 'ranking/28' => 'ranking#show28'
+  get 'ranking/29' => 'ranking#show29'
+  get 'ranking/30' => 'ranking#show30'
+  get 'ranking/01' => 'ranking#show01'
+  get 'ranking/02' => 'ranking#show02'
+  get 'ranking/03' => 'ranking#show03'
+  get 'ranking/04' => 'ranking#show04'
+  get 'ranking/05' => 'ranking#show05'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

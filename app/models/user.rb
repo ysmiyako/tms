@@ -7,5 +7,10 @@ class User < ActiveRecord::Base
 scope :get_by_name, ->(name) {
 where("name like ?", "%#{name}%")
 }
- 
+#公開可否による絞り込み
+
+#日付による絞り込み
+
+  
+  paginates_per 10
 end

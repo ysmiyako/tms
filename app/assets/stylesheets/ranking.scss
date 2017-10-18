@@ -2,8 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
+body {
+  padding-bottom: 30px;
+}
 
 .a-head-title {
 width: 100%;
@@ -35,7 +36,7 @@ border: 5px double #333333;
 .c-result {
 margin: 0 auto;
 background-color:#f0f8ff ;
-padding: 20px;
+padding-top: 20px;
 padding-bottom: 50px;
 }
 
@@ -118,8 +119,12 @@ background: linear-gradient(#808080, #121212);
 
 .d-result {
 margin: 0 auto;
-padding: 20px;
-width: 65%;
+padding-top: 20px;
+}
+
+.d-result-content {
+  margin: 0 auto;
+  width: 65%;
 }
 
 .d-result-title{
@@ -127,11 +132,17 @@ color:green;
 }
 
 .d-result-table {
+margin: 0 auto;
 width: 100%;
 }
 .d-result-table tr {
 background-color: Black;
 color: white;
+text-align: center;
+}
+
+.d-result-table th {
+  text-align: center;
 }
 
 .ba-title {
@@ -146,6 +157,7 @@ color:green;
   background-image: url(result.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
+  background-color:#f0f8ff
 }
 
 .ca-title {
@@ -160,11 +172,13 @@ color:green;
   background-image: url(back12.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
+  background-color:#f0f8ff
 }
 
 
 .ca-video {
-  padding: 50px;
+  margin: 0 auto;
+  
   background-color:#f0f8ff ;
   color:green;
   padding-bottom: 300px;
@@ -176,29 +190,100 @@ color:green;
   padding: 20px;
   padding-bottom: 50px;
 }
-.ca-video-player {
+.video {
 margin: 0 auto;
-padding: 100px;
-width: 200px;
-border: 5px double #333333;
+width: 100%;
 text-align: center;
 }
 .ca-sns {
   margin: 0 auto;
-  width: 65%;
+  width: 80%;
   padding: 20px;
   float: right;
 }
 
+.logos{
+  margin: 10px 10px 10px 10px;
+   padding: 10px;
+  background-image: url(Schaeffler.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 90% 50% ;
+
+}
+
+.logoimg {
+  margin-left: 50 auto;
+}
 @media screen and (max-width: 750px){
   
- 
-
-  .a-head-title>h1 {
+   .a-head-title>h1 {
     font-size: 15pt;
   }
+
+  .b-lucas>h3 {
+font-size: 10pt;
+  }
+
+  .c-result-title>h2 {
+    font-size: 13pt;
+  }
+
+.d-result-title>h2 {
+  font-size: 13pt;
+}
+
+.ba-title>h1 {
+  font-size: 15pt;
+}
+
+.c-result-title>h2 {
+  font-size: 13pt;
+}
+
+.d-result-title>h2 {
+  font-size: 13pt;
+}
+
+.ca-title>h1 {
+  font-size: 15pt;
+}
+
+.ca-video-title>h2 {
+  font-size: 13pt;
+}
 
   .a-head-image {
     padding: 80px;
   }
+
+  .ca-image {
+   padding: 80px;
+   }
+
+  .ba-head-image {
+   padding: 80px;
+   }
+
+  .c-result-content {
+    width: 100%;
+  }
+  
+  .ctable th {
+    font-size: 10px;
+  }
+  
+  .d-result-content {
+    width: 100%;
+  }
+  
+  .ca-video-content {
+    width: 100%;
+  }
+  
+  .logos {
+    padding: 5px;
+    margin: 5px 5px 5px 5px;
+  }
+
 }

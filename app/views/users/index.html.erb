@@ -7,7 +7,9 @@
 <div id="search"> 
 <%= form_tag(users_path, method: "get") do %>
 <%= label_tag :name, "Name  " %></br>
-<%= text_field_tag :name, params[:name] %>
+<%= text_field_tag :name, params[:name] %><br>
+<%= label_tag :allow, "動画公開可のみ" %>
+<%= check_box_tag :allow, true, false %>
 <%= submit_tag "検索" %>
 <% end %>
 </div>
@@ -15,8 +17,10 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th width="35%">Name</th>
-      <th width="35%">Time</th>
+      <th width="10%">day</th>
+      <th width="30%">Name</th>
+      <th width="20%">Time</th>
+      <th width="10%">動画公開可否</th>
       <th width="30%"; colspan="3"></th>
     </tr>
   </thead>
@@ -24,9 +28,10 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td><%= user.created_at.strftime("%m月%d日 %H時%M分") %></td>
         <td><%= user.name %></td>
         <td><%= user.time %></td>
-       
+        <td><%= user.allow ? '可' : '不可' %></td>
         <td><%= link_to '編集', edit_user_path(user) %></td>
         <td><%= link_to '削除', user, method: :delete, data: { confirm: '本当に削除しますか？?' } %></td>
       </tr>
@@ -35,6 +40,8 @@
 </table>
 
 <br>
+
+<div><%= paginate @users %></div>
 
 <%= link_to 'New Driver', new_user_path %>
 </div>

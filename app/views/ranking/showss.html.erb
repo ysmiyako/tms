@@ -3,56 +3,36 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
-    
   </head>
-  <body>
-   <%= render 'logo' %>
-  
-<div class="a-head-title">
- <h1>Formula E in TOKYO MOTOR SHOW </h1>
+
+   
+<body>
+<div class="ba-head">
+    <div class="ba-title">
+    <h1>Results</h1>
+    </div>
 </div>
 
-<div class="a-head-image">
-</div>
-
-<div class="b-lucas">
- <h3>ルーカスに挑戦！</h3>
- <div class="b-lucas-video">
-<p>ルーカスプレイ映像</p>
- </div>
-</div>
+<div class="ba-head-image">
+  </div>
 
 <div class="c-result">
  <div class="c-result-content">
  <div class="c-result-title">
-  <h2>Top 10 Drivers </h2>
+  <h2>Results on 11/03</h2>
  </div>
- <div class="c-result-table">
-<table class="ctable">
-  <thead>
-        <tr>
-      <th width="5%">Pos</th>
-      <th width="70%">Driver</th>
-      <th width="25%">Time</th>
-    </tr>
-  </thead>
-  <tbody>
-       <% @users.each.with_index(1) do |user, index| %>
-  
-    <tr><td class="rank"><%= "#{index}" %></td> <td><%= link_to_if(user.movie.present?, user.name, movie_path(user)) %></td><td><%= user.time %></td></tr>
-    <% end %>
-  </tbody>
-</table>
-</div>
-</div>
-</div>
-
-
-
+    <% if @users.blank? %>
+    <div class="c-nodata"><p>ドライバーが登録されていません。</p></div>
+   <% else %>
+<%= render 'resulttable' %>
+   <% end %>
+ </div>
+ </div>
+ 
 <div class="d-result">
 <div class="d-result-content">
 <div class="d-result-title">
-<h2> All Results </h2>
+<h2> Other Day </h2>
 </div>
 
 <table class="d-result-table">
@@ -73,10 +53,6 @@
 </div>
 
 
-
 </body>
 </html>
-
-
-
 
