@@ -30,7 +30,7 @@ gem 'carrierwave'
 gem 'unicorn'
 gem 'kaminari'
 gem 'social-share-button'
-
+gem 'fog'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

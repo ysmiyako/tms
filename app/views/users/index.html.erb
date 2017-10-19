@@ -6,8 +6,10 @@
 
 <div id="search"> 
 <%= form_tag(users_path, method: "get") do %>
-<%= label_tag :name, "Name  " %></br>
+<%= label_tag :name, "Name  " %>
 <%= text_field_tag :name, params[:name] %><br>
+<%= label_tag :createday, "登録日" %>
+<%= date_field_tag :createday, Date.today %>
 <%= label_tag :allow, "動画公開可のみ" %>
 <%= check_box_tag :allow, true, false %>
 <%= submit_tag "検索" %>

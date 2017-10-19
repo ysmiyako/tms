@@ -13,7 +13,14 @@ class UsersController < ApplicationController
      if params[:allow].present?
        @users = @users.where(:allow => true)
      end
+     
+     if params[:createday].present?
+     time = Time.parse(params[:createday]).all_day
+     @users = @users.where(:created_at => time)
+     
+     end
   end
+  
 
 
   # GET /users/1

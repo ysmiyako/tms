@@ -70,7 +70,7 @@ background: linear-gradient(#808080, #121212);
   border-bottom:1px solid #aaa;
   line-height: 120%;
   text-align: center;
-  text-shadow:0 -1px 0 rgba(255,255,255,0.9);
+ 
   box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
 }
 
@@ -181,13 +181,13 @@ color:green;
   
   background-color:#f0f8ff ;
   color:green;
-  padding-bottom: 300px;
 }
 
 .ca-video-content {
   margin: 0 auto;
   width: 65%;
-  padding: 20px;
+   background-color:#f0f8ff ;
+  padding-top: 10px;
   padding-bottom: 50px;
 }
 .video {
@@ -203,12 +203,13 @@ text-align: center;
 }
 
 .logos{
-  margin: 10px 10px 10px 10px;
+  margin: 20px 10px;
    padding: 10px;
   background-image: url(Schaeffler.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 90% 50% ;
+  
 
 }
 
@@ -266,7 +267,7 @@ font-size: 10pt;
    }
 
   .c-result-content {
-    width: 100%;
+    width: 95%;
   }
   
   .ctable th {
@@ -274,16 +275,16 @@ font-size: 10pt;
   }
   
   .d-result-content {
-    width: 100%;
+    width: 95%;
   }
   
   .ca-video-content {
-    width: 100%;
+    width: 95%;
   }
   
   .logos {
     padding: 5px;
-    margin: 5px 5px 5px 5px;
+    margin: 15px 0px;
   }
 
 }
