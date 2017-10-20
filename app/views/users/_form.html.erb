@@ -40,17 +40,19 @@ $("#post1").on("click", function() {
   </div>
   <% if @user.allow %>
   <%= "動画公開可" %>
-  <div class="field">
-    <%= f.label :movie %><br>
-    <%= f.file_field :movie %>
-  </div>
-   <div class="field">
+
     <!-- 既存レコード(DBに保存されている)かつ、画像が存在する場合 -->
     <% if @user.persisted? && @user.movie? %>
+    <p>動画アップロード済み</p>
       <label>
         <%= f.check_box :remove_movie %>
         動画を削除
       </label>
+      <% else %>
+        <div class="field">
+    <%= f.label :movie %><br>
+    <%= f.file_field :movie %>
+    </div>
       <% end %>
     <% else %>
     <%= "動画公開不可" %>

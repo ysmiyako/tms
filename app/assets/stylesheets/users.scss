@@ -3,6 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap-sprockets";
 @import "bootstrap";
+.logos{
+  margin: 20px 10px;
+   padding: 30px;
+  background-image: url(Schaeffler.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 90% 50% ;
+}
+
+.schimg {
+    margin:0 auto;
+    padding-left:1000px;
+    padding:20px;
+    border-bottom:1px solid #ccc;
+}
 
 #search {
     padding :20px;
@@ -11,4 +26,20 @@
 .editcontent {
     margin: 0 auto;
     width: 80%;
+}
+.linknewdriver {
+    bottom:80px;
+    position:absolute;
+    right:80px;
+}
+.linknewdriver>p {
+    font-size:15pt;
+}
+.showtitle {
+    padding:50px;
+    text-align:center;
+}
+
+.showtitle>h1 {
+    font-size:30pt;
 }

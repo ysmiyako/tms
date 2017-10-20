@@ -1,0 +1,7 @@
+<%= form_tag({action: 'uploadmovie'}, {method: 'patch'}) do %>
+        
+    <%= label_tag :user, :movie, "upload" %><br>
+    <%= file_field_tag :movie, @user.movie %>
+    <%= text_field_tag :name %>
+    <%= submit_tag "post" %>
+<% end %>

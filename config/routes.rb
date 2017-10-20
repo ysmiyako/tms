@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'users/new/complete' => 'users#complete'
   
   
+  get 'users/new/addmovie' => 'users#addmovie'
   get 'ranking/28' => 'ranking#show28'
   get 'ranking/29' => 'ranking#show29'
   get 'ranking/30' => 'ranking#show30'

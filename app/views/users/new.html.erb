@@ -1,5 +1,16 @@
+<script>
+$(function() {
+  $(document).on("keypress", "input:not(.allow_submit)", function(event) {
+    return event.which !== 13;
+  });
+});
+</script>
 
-<div class="container">
+
+  <div class="schimg">
+  <%= render 'logo' %>
+  </div>
+  <div class="container">
 <div class="atitle">
 <h1>New Driver</h1>
 </div>

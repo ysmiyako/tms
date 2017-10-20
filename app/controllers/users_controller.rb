@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.page(params[:page])
+    @users = User.page(params[:page]).per(20)
     
      if params[:name].present?
        @users = @users.get_by_name params[:name]
@@ -17,7 +17,10 @@ class UsersController < ApplicationController
      if params[:createday].present?
      time = Time.parse(params[:createday]).all_day
      @users = @users.where(:created_at => time)
+     end
      
+     if params[:movieexist].present?
+       @users = @users.where(:movie => nil)
      end
   end
   
@@ -58,7 +61,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: '更新完了' }
+        format.html { redirect_to :back, notice: '更新完了' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -77,6 +80,7 @@ class UsersController < ApplicationController
     end
   end
   
+ 
   def complete
   end
 

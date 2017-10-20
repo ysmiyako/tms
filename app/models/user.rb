@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
     mount_uploader :movie, MovieUploader
+    validates_presence_of :time, :message => "は必須項目です。"
     validates_presence_of :name, :message => "は必須項目です。"
     validates_uniqueness_of :name, :message => "が重複しています。"
     

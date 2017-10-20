@@ -12,6 +12,8 @@
 <%= date_field_tag :createday, Date.today %>
 <%= label_tag :allow, "動画公開可のみ" %>
 <%= check_box_tag :allow, true, false %>
+<%= label_tag :movieexist, "動画未アップのみ" %>
+<%= check_box_tag :movieexist, true, false %>
 <%= submit_tag "検索" %>
 <% end %>
 </div>
@@ -19,10 +21,11 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th width="10%">day</th>
+      <th width="10%">Day</th>
       <th width="30%">Name</th>
-      <th width="20%">Time</th>
+      <th width="15%">Time</th>
       <th width="10%">動画公開可否</th>
+      <th width="5%">動画有無</th>
       <th width="30%"; colspan="3"></th>
     </tr>
   </thead>
@@ -34,7 +37,8 @@
         <td><%= user.name %></td>
         <td><%= user.time %></td>
         <td><%= user.allow ? '可' : '不可' %></td>
-        <td><%= link_to '編集', edit_user_path(user) %></td>
+        <td><%= user.movie? ? 'UP済' : '未UP' %></td>
+        <td><%= link_to '編集', edit_user_path(user), :target=>["_blank"] %></td>
         <td><%= link_to '削除', user, method: :delete, data: { confirm: '本当に削除しますか？?' } %></td>
       </tr>
     <% end %>
