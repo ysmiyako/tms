@@ -19,3 +19,5 @@
 # Ignore public/uploads directory
 
 public
+
+movie_uploader.rb
