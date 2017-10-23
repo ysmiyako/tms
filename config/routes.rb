@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :users
-  get 'ranking/top' => 'ranking#index'
+  #get 'ranking/top' => 'ranking#index'
+  root to: 'ranking#index'
   match 'ranking/movie(/:id)'  => 'ranking#show' , :via => :get, as: :movie
   get 'users/new/complete' => 'users#complete'
   
