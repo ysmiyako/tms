@@ -2,9 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  padding-bottom: 30px;
-}
+
 
 .a-head-title {
 margin:0 auto;
@@ -22,9 +20,35 @@ color: green;
 }
 
 .b-lucas {
-text-align: center;
 padding: 20px;
 padding-bottom: 50px;
+margin:0 auto;
+}
+
+.b-lucas-title {
+  text-align:center;
+}
+
+.lucasprofile {
+  overflow: hidden;
+  width:60%;
+  margin:0 auto;
+  padding-bottom:30px;
+}
+
+.lucasprofile>img {
+  float:left;
+  width:367px;
+  height:307px;
+  
+}
+
+.lucasprofile>p {
+  overflow: hidden;
+}
+
+.lucasprofile>h3 {
+  
 }
 
 .b-lucas-video {
@@ -121,6 +145,7 @@ background: linear-gradient(#808080, #121212);
 .d-result {
 margin: 0 auto;
 padding-top: 20px;
+padding-bottom:50px;
 }
 
 .d-result-content {
@@ -159,6 +184,10 @@ color:green;
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-color:#f0f8ff
+}
+
+.pagenater {
+  text-align:center;
 }
 
 .ca-title {
@@ -200,7 +229,19 @@ text-align: center;
   margin: 0 auto;
   width: 80%;
   padding: 20px;
-  float: right;
+  display: table;
+  table-layout: fixed;
+}
+
+.fb-share-button {
+  display:table-cell;
+  vertical-align: middle;
+}
+
+.twitter-share-button {
+  display:table-cell;
+  vertical-align: middle;
+  width:20px;
 }
 
 .logos{
@@ -217,6 +258,14 @@ text-align: center;
 .logoimg {
   margin-left: 50 auto;
 }
+
+
+@media screen and (max-width: 1220px){
+  .lucasprofile>img {
+    float:none;
+  }
+}
+  
 @media screen and (max-width: 750px){
   
    .a-head-title>h1 {
@@ -225,6 +274,14 @@ text-align: center;
 
   .b-lucas>h3 {
 font-size: 10pt;
+  }
+  
+  .b-lucas-titlel {
+    font-size: 13pt;
+  }
+  
+  .lucasprofile>h3 {
+    font-size: 10pt;
   }
 
   .c-result-title>h2 {
@@ -290,6 +347,9 @@ font-size: 10pt;
     width: 95%;
   }
   
+  .ca-sns {
+    width: 95%;
+  }
   
   .logos {
     padding: 5px;
@@ -300,6 +360,13 @@ font-size: 10pt;
     height: 50%;
   }
   
+ .lucasprofile {
+   width:95%;
+ }
  
+ .lucasprofile>h3 {
+   text-align:center;
+ }
+
 
 }

@@ -10,8 +10,8 @@ class RankingController < ApplicationController
     
     
     def show28
-        range = Date.new(2017,10,28).beginning_of_day..Date.new(2017,10,28).end_of_day
-        @users = User.where(created_at: range)
+        range = Date.new(2017,10,02).beginning_of_day..Date.new(2017,10,28).end_of_day
+        @users = User.where(created_at: range).order('created_at DESC').page(params[:page]).per(20)
     end
     
     def show29
