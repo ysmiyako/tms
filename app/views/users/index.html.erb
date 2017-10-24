@@ -21,18 +21,20 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th width="5%">ID</th>
       <th width="10%">Day</th>
       <th width="30%">Name</th>
       <th width="15%">Time</th>
       <th width="10%">動画公開可否</th>
       <th width="5%">動画有無</th>
-      <th width="30%"; colspan="3"></th>
+      <th width="25%"; colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td><%= user.id %></td>
         <td><%= user.created_at.strftime("%m月%d日 %H時%M分") %></td>
         <td><%= user.name %></td>
         <td><%= user.time %></td>

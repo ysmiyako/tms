@@ -2,14 +2,15 @@
 <table class="ctable">
   <thead>
         <tr>
-      <th width="70%">Driver</th>
-      <th width="25%">Time</th>
+      <th width="20%">Date</th>
+      <th width="55%">Driver</th>
+      <th width="20%">Time</th>
     </tr>
   </thead>
   <tbody>
        <% @users.each do |user| %>
   
-    <tr><td class="rank"><%= link_to_if(user.movie.present?, user.name, movie_path(user)) %></td><td><%= user.time %></td></tr>
+    <tr><td class="rank"><%= user.created_at.strftime("%m/%d %H:%M") %></td><td><%= link_to_if(user.movie.present?, user.name, movie_path(user)) %></td><td><%= user.time %></td></tr>
     <% end %>
   </tbody>
 </table>
