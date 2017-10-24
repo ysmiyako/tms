@@ -290,9 +290,26 @@ text-align: center;
   text-align:center;
 }
 
+.comsoon {
+  display:block;
+  margin:0 auto;
+}
+
 @media screen and (max-width: 1220px){
   .lucasprofile>img {
     float:none;
+    display:block;
+    margin:0 auto;
+  }
+  
+  .lucasprofile>h3 {
+    text-align:center;
+  }
+  
+  .lucasprofile>p {
+    width:350px;
+    display:block;
+    margin:0 auto;
   }
 }
   
