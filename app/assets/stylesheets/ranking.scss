@@ -2,8 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
+.clear {
+  clear:both;
+}
+#videoshare {
+  
+  text-align: right;
+}
+.item_list ul li a:visited {
+  background-color: transparent !important;
+  color: white !important;
+}
 .a-head-title {
 margin:0 auto;
 width: 80%;
@@ -23,6 +32,7 @@ color: green;
 padding: 20px;
 padding-bottom: 50px;
 margin:0 auto;
+width:100%;
 }
 
 .b-lucas-title {
@@ -30,24 +40,35 @@ margin:0 auto;
 }
 
 .comsoon {
-  width:80%;
+  width:50%;
   text-align:center;
+  overflow:hidden;
+  float:right;
+  
 }
 
-.comsonn>img {
-  width:50%;
-  margin:0 auto;
-  display:block;
+.comsoon>img {
+  width:512px;
+  height:276px;
+  
+  
+}
+.comsoon>p {
+  text-align:center;
 }
 .lucasprofile {
   overflow: hidden;
-  width:60%;
+  width:50%;
   margin:0 auto;
   padding-bottom:30px;
+  
+  float:left;
+  text-align:center;
+  
 }
 
 .lucasprofile>img {
-  float:left;
+  
   width:367px;
   height:307px;
   
@@ -69,6 +90,7 @@ border: 5px double #333333;
 }
 
 .c-result {
+  clear:both;
 margin: 0 auto;
 background-color:#f0f8ff ;
 padding-top: 20px;
@@ -171,6 +193,7 @@ color:green;
 .d-result-table {
 margin: 0 auto;
 width: 100%;
+font-size:20pt;
 }
 .d-result-table tr {
 background-color: Black;
@@ -271,17 +294,15 @@ text-align: center;
 }
 
 .videolucas{
-  position:relative;
-  width:80%;
-  padding-top:56.25%;
-  margin:0 auto;
+  float:left;
+ text-align:center;
+ width:50%;
 }
 .videolucas iframe{
-  position:absolute;
-  top:0;
-  right:0;
-  width:100%;
-  height:100%;
+
+  
+  width:500px;
+  height:215px;
 }
 
 .lucastime {
@@ -296,7 +317,45 @@ text-align: center;
   margin:0 auto;
 }
 
-@media screen and (max-width: 1220px){
+/* 商品一覧エリアの背景 */
+.item-list {
+  background: white;
+  
+}
+
+.item-list ul {
+  padding:0px;
+}
+/* クリアフィックス */
+.item-list ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* 商品一覧のリストの設定 */
+.item-list ul li {
+  display: block;
+  float: left;
+  height: 50px;
+  list-style-type: none;
+  background: #f5f5f5;
+  text-align: center;
+  border: solid 3px white;
+  vertical-align: middle;
+  color: white;
+  font-size:35px;
+  line-height:100%;
+
+
+  width: 25%;
+  
+}
+
+@media screen and (max-width: 1050px){
+  .lucasprofile {
+    float:none;
+  }
   .lucasprofile>img {
     float:none;
     display:block;
@@ -312,6 +371,23 @@ text-align: center;
     display:block;
     margin:0 auto;
   }
+  
+  .comsoon {
+    float:none;
+    display:block;
+    margin:0 auto;
+  }
+  .comsoon>img {
+    width:100%;
+    height:100%;
+  }
+  
+  .videolucas {
+    width:100%;
+    float:none;
+    display:block;
+    
+  }
 }
   
 @media screen and (max-width: 750px){
@@ -324,7 +400,7 @@ text-align: center;
 font-size: 10pt;
   }
   
-  .b-lucas-titlel {
+  .b-lucas-title {
     font-size: 13pt;
   }
   
@@ -414,6 +490,15 @@ font-size: 10pt;
  
  .lucasprofile>h3 {
    text-align:center;
+ }
+ 
+ .videolucas iframe {
+   width :100%;
+ }
+ 
+ .item-list ul li {
+   font-size: 15px;
+   height: 25px;
  }
 
 
