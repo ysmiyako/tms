@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.page(params[:page]).per(20)
+    @users = User.order('id ASC').page(params[:page]).per(20)
     
      if params[:name].present?
        @users = @users.get_by_name params[:name]
@@ -93,6 +93,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :time, :movie, :remove_movie, :allow)
+      params.require(:user).permit(:name, :time, :movie, :remove_movie, :allow, :bestlap)
     end
 end

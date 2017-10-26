@@ -38,8 +38,13 @@ $(function() {
   </div>
   
    <div class="field">
-    <%= f.label :allow, "プレイ動画を特設ページにて公開できます。ご希望の方はチェックしてください。" %>
-    <%= f.check_box :allow, label:" " %>
+    <%= f.label :allow, "ドライビング動画を特設ページにて公開します。公開を希望されない方はチェックを外してください。" %>
+    <%= f.check_box :allow, checked:true, label:" " %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :bestlap, "Best Lap" %>
+    <%= f.text_field :bestlap, hide_label: true, style: "width: 100px" %>
   </div>
  
   <div class="actions">
