@@ -45,3 +45,4 @@ staging:
 production:
   <<: *default_settings
  monitor_mode: true
+ app_name: tms (production)
