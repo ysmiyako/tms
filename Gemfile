@@ -32,7 +32,7 @@ gem 'kaminari'
 gem 'social-share-button'
 gem 'fog'
 gem 'pg'
-
+gem 'newrelic_rpm'
 #gem 'jquery-turbolinks'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

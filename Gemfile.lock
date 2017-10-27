@@ -250,6 +250,7 @@ GEM
     mini_portile2 (2.2.0)
     minitest (5.10.3)
     multi_json (1.12.1)
+    newrelic_rpm (4.5.0.337)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     pg (0.21.0)
@@ -355,6 +356,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
+  newrelic_rpm
   pg
   rails (= 4.2.5)
   sass-rails (~> 5.0)
