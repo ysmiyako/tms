@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'ranking/28' => 'ranking#show28'
   get 'ranking/29' => 'ranking#show29'
   get 'ranking/30' => 'ranking#show30'
+  get 'ranking/31' => 'ranking#show31'
   get 'ranking/01' => 'ranking#show01'
   get 'ranking/02' => 'ranking#show02'
   get 'ranking/03' => 'ranking#show03'

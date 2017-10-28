@@ -22,6 +22,10 @@ class RankingController < ApplicationController
         range = Date.new(2017,10,30).beginning_of_day..Date.new(2017,10,30).end_of_day
         @users = User.where(created_at: range).order('created_at ASC').page(params[:page]).per(20)
     end
+    def show31
+        range = Date.new(2017,10,31).beginning_of_day..Date.new(2017,10,31).end_of_day
+        @users = User.where(created_at: range).order('created_at ASC').page(params[:page]).per(20)
+    end
     def show01
         range = Date.new(2017,11,01).beginning_of_day..Date.new(2017,11,01).end_of_day
         @users = User.where(created_at: range).order('created_at ASC').page(params[:page]).per(20)
